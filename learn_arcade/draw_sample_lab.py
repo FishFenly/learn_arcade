@@ -7,6 +7,27 @@ def app():
 
     arcade.start_render()
 
+    # --- a tree scene ---
+
+    # draw the grass, which is the full width of the window and a quarter of the height
+    arcade.draw_lrtb_rectangle_filled(
+        0,
+        c.SCREEN_WIDTH,
+        c.SCREEN_HEIGHT / 4,
+        0,
+        (59,192,52)
+    )
+
+    # draw the first tree
+    arcade.draw_rectangle_filled(
+        c.SCREEN_WIDTH - 100,
+        c.SCREEN_HEIGHT - 100,
+        10,
+        10,
+        (),
+        90
+    )
+
     arcade.finish_render()
 
     arcade.run()
